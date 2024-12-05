@@ -1,0 +1,11 @@
+:root{
+    /* 定义你的全局变量 */
+    --clr:#0f0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
