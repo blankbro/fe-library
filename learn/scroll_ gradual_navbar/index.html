@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Gradual Navbar</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">文章</a></li>
+            <li><a href="#">作品</a></li>
+        </ul>
+        <a href="#"></a>
+        <div class="navbar-bg"></div>
+    </header>
+    <section>
+        <div class="banner1"></div>
+    </section>
+    <script>
+        window.addEventListener("scroll", () => {
+            let navbar_bg = document.querySelector("header .navbar-bg");
+            let opacity_value = window.scrollY * 0.01 - 0.06;
+            if (opacity_value > 0.94) {
+                opacity_value = 0.94
+            }
+            navbar_bg.style.setProperty("opacity", opacity_value);
+        })
+    </script>
+</body>
+
+</html>
